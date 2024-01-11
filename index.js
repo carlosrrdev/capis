@@ -23,10 +23,12 @@ app.use(cors({
 
 app.use(express.json())
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send(dummyData);
 });
 
 app.listen(port, () => {
   console.log(`CAPIs is listening at http://localhost:${port}`);
 });
+
+module.exports = app;
